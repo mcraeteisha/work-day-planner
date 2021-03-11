@@ -1,27 +1,16 @@
+//Reference variables
 var daytimeEl = document.getElementById("currentDay");
-var timeOfDayEl = document.getElementById("time-of-day");
+var timeOfDayEl = document.getElementById("work-hour");
 var textFieldEl = document.getElementById("text-field");
 var saveBtn = document.getElementById("save-btn");
 var plannerContainer = $("#time-container");
 var workHoursIndex = 0;
-var timeEl;
-var textEl;
-var saveBtnEl;
+//var timeEl;
+//var textEl;
+//var saveBtnEl;
 
 
-var workHours = [
-    '9:00 AM',
-    '10:00 AM',
-    '11:00 AM',
-    '12:00 PM',
-    '1:00 PM',
-    '2:00 PM',
-    '3:00 PM',
-    '4:00 PM',
-    '5:00 PM',
-];
-
-
+//Displays the day of the week and date on the page
 var timeInterval = setInterval(function () {
     // update the page with the new moment
     var time = moment().format("dddd, MMMM Mo");
@@ -30,16 +19,8 @@ var timeInterval = setInterval(function () {
 
 
 function generatePlanner() {
-    for (var i = 0; i < workHours.length; i++) {
-        var workHoursEl = $("<li>").addClass("row");
-        var timeEl = $("<p>").addClass("hour").text(workHours[i]);
-        var textEl = $("<input>").attr({ type: 'text', id: 'work-description', name: 'text-input' }).addClass("description").addClass("time-block");
-        var saveBtnEl = $("<button>").addClass("saveBtn");
-        workHoursEl.append(timeEl).append(textEl).append(saveBtnEl);
-}
-    plannerContainer.append(workHoursEl);
-}
 
+}
 
 generatePlanner();
 
