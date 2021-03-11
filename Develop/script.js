@@ -1,5 +1,9 @@
 var daytimeEl = document.getElementById("currentDay");
-var plannerContainer = $("#time-container")
+var timeOfDayEl = document.getElementById("time-of-day");
+var textFieldEl = document.getElementById("text-field");
+var saveBtn = document.getElementById("save-btn");
+var plannerContainer = $("#time-container");
+var workHoursIndex = 0;
 var timeEl;
 var textEl;
 var saveBtnEl;
@@ -24,6 +28,7 @@ var timeInterval = setInterval(function () {
     daytimeEl.textContent = time;
 })
 
+
 function generatePlanner() {
     for (var i = 0; i < workHours.length; i++) {
         var workHoursEl = $("<li>").addClass("row");
@@ -36,20 +41,14 @@ function generatePlanner() {
 }
 
 
+generatePlanner();
+
 
 
 //var projectBtn = document.getElementById(“add-project-btn”);
 
 
-
-
-
-
 //function addProject(event) {
 //}
 
-
-
-
 //projectBtn.addEventListener(‘click’, addProject);
-generatePlanner();
